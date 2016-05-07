@@ -1,0 +1,42 @@
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+.nav-wrapper {
+        background-color: #ff5454;
+}
+
+nav .input-field Login {
+
+    
+    font-color:#000000; 
+    color: #26a69a;
+
+}
+.modal h1 {
+  color: #26a69a;
+}
+
+.modal Sign-up {
+      margin-left: 300px;
+    margin-top: -289px; 
+}
+
+footer.page-footer1 {
+    margin-top: 20px;
+    padding-top: 20px;
+    background-color: #ff5454;
+}
+  main {
+    flex: 1 0 auto;
+  }
+  .search input{
+        border-color: white;
+  }
+
+  .search i {
+    margin-top: -68px;
+    margin-left: -34px;
+  }
+
