@@ -36,11 +36,12 @@ app.use(passport.session());
 var flash = require('connect-flash');
 app.use(flash());
 
-var initPassport = require('./passport/init');
+var initPassport = require('./public/javascripts/init');
 initPassport(passport);
 
 var routes = require('./routes/index')(passport);
 app.use('/', routes);
+
 
 app.use(function(req, res, next) {
     var err = new Error('Not Found');

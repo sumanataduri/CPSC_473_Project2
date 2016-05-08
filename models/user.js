@@ -1,7 +1,7 @@
 
 var mongoose = require('mongoose');
 
-module.exports = mongoose.model('User',{
+var User = mongoose.model('User',{
 	id: String,
 	username: String,
 	password: String,
@@ -9,3 +9,24 @@ module.exports = mongoose.model('User',{
 	firstName: String,
 	lastName: String
 });
+console.log("going into user.js");
+var Quiz= mongoose.model('Quiz',{
+    username: String,
+    category: String,
+    questionsData:[ 
+        contents
+    ]	
+
+});
+var contents=new mongoose.Schema({
+		id: Number,
+        questions:String,
+        choices: [String],
+        answer: String
+    });
+
+
+module.exports={
+	User: User,
+	Quiz: Quiz
+};
