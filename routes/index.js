@@ -47,7 +47,6 @@ module.exports = function(passport) {
     router.get('/quiz/:id', function(req, res) {
         
        Quiz.Quiz.find({}, function(err, values) {
-            console.log("in the quizdisplay");
             if (err) {
                 console.log('Error in getting value from database: ' + err);
                 return (err);

@@ -112,7 +112,6 @@ ul.user-details{
         font-family: 'Titillium web',sans-serif;
         font-size: 2.2em;
         line-height: 65px;
-
     }
     #myQuiz h2{
         font-size: 3em;
@@ -140,7 +139,7 @@ ul.user-details{
     width: 550px;
     position: absolute;
     top:225px;
-    left:660px;
+    left:1600px;
 }
 #myQuiz .question .txt{
     font-size: 1.6em;
@@ -181,7 +180,11 @@ ul.user-details{
     }
 #myQuiz .question.unanswered .ans{
     cursor: pointer;
+} 
+h2#label{
+    visibility: hidden;
 }
+
 #myQuiz .question.unanswered .ans:hover{
     background-color: rgba(238,189,102,.2);
 }
@@ -194,7 +197,7 @@ ul.user-details{
 #myQuiz .results{
     position: absolute;
     top: 225px;
-    left: 660px;
+    left: 1660px;
     width: 550px;
 }
 #myQuiz .active, #myQuiz .inactive{
@@ -216,7 +219,9 @@ ul.user-details{
 #myQuiz .intro p{
     margin: 0px 0px 40px 0px;
 }
-
+div.answer{
+    display: none;
+}
 /* Feedback*/
 #myQuiz .feedback{
     color: #efbe5e;

@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../stylesheets/style.css"> 
     <script type="text/javascript" src='../javascripts/quiz.js'></script>
   </head>
-  <body >
+  <body>
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
@@ -36,9 +36,9 @@
         </div>
       </div>
     </div>
-    <center>
+    
 <div id="myQuiz">
-<h1>Test your knowledge: <span> Saturn</span></h1>
+<h2 id='label'>Your Score</h2>
 <div class='score'></div>
 <div class='intro active'>
   <h2>Welcome</h2>
@@ -47,30 +47,28 @@
 </div>
 
  <% values.forEach(function(value){ %>
- <% if(value.category==quizname){ %>
+ <% if(value.quizzname==quizname){ %>
 
 <% value.questionsData.forEach(function(question){%>
 
- <div class="question unanswered">
-  <p class='txt' ><%= question.questions%></p>
+ <div class="question unanswered" id='<%=question.id%>' </p>
+  <p class='txt'><%=question.questions%></p>
+  <div class='answer' id='<%=question.id%>' ><%=question.answer%></div>
   <% for(var i=0;i<4;i++){%>
-  <p class='ans' onclick='selectedanswer(<%= question.answer%>,<%=question.choices[i]%>)'><%=question.choices[i] %></p>
+  <p class='ans'><%=question.choices[i]%></p>
   <% }%>
-  <div class='feedback'>
-    <p>You are <strong>correct</strong>.</p>
-    <p>Oops! That is not correct.</p>
-    <div class='btn'> Continue</div>
-  </div>
+ 
 </div><br>  
 <% })%> 
 <% } %>
     <% }) %>
-    <!--
+    
       <div class="results">
           <h3>Results</h3>
-          <p> you have X points</p>
-      </div>-->
+          <p></p>
+          <div class='btn' onclick="location.href='/'"> Continue</div>
+      </div>
 </div>
-      </center>
+      
   </body>
 </html>
