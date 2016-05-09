@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
+    </script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/style.css"> 
+    <script type="text/javascript" src='../javascripts/quiz.js'></script>
+  </head>
+  <body >
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+            <span class="sr-only">Toggle navigation
+            </span>
+            <span class="icon-bar">
+            </span>
+            <span class="icon-bar">
+            </span>
+            <span class="icon-bar">
+            </span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <span>Quizzup
+            </span>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+          <ul class="nav navbar-nav navbar-right">
+          </ul>
+        </div>
+      </div>
+    </div>
+    <center>
+<div id="myQuiz">
+<h1>Test your knowledge: <span> Saturn</span></h1>
+<div class='score'></div>
+<div class='intro active'>
+  <h2>Welcome</h2>
+  <p>Click begin to test your knowledge</p>
+  <p class='btn' >Begin</p>
+</div>
+
+ <% values.forEach(function(value){ %>
+ <% if(value.category==quizname){ %>
+
+<% value.questionsData.forEach(function(question){%>
+
+ <div class="question unanswered">
+  <p class='txt' ><%= question.questions%></p>
+  <% for(var i=0;i<4;i++){%>
+  <p class='ans' onclick='selectedanswer(<%= question.answer%>,<%=question.choices[i]%>)'><%=question.choices[i] %></p>
+  <% }%>
+  <div class='feedback'>
+    <p>You are <strong>correct</strong>.</p>
+    <p>Oops! That is not correct.</p>
+    <div class='btn'> Continue</div>
+  </div>
+</div><br>  
+<% })%> 
+<% } %>
+    <% }) %>
+    <!--
+      <div class="results">
+          <h3>Results</h3>
+          <p> you have X points</p>
+      </div>-->
+</div>
+      </center>
+  </body>
+</html>

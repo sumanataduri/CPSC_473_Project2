@@ -12,6 +12,7 @@ var User = mongoose.model('User',{
 console.log("going into user.js");
 var Quiz= mongoose.model('Quiz',{
     username: String,
+    quizzname: String,
     category: String,
     questionsData:[ 
         contents

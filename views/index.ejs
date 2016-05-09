@@ -88,12 +88,13 @@
     </div>
     <div class="section">
         <div class="container">
-            <div class="row quizzdisplay">
+          <% if (!user) { %>
+            <div class="row ">
 
                 <% values.forEach(function(value){ %>
 
                     <div class="col-xs-6 col-md-3">
-                        <a href="#" class="thumbnail">
+                        <a href="/login" class="thumbnail">
                             <img src="http://www.mylmstips.com/wp-content/uploads/2014/06/ID-100215254.jpg" alt="..." width="180px" height="135px">
                             <div>
                                 <%=value.category %>
@@ -103,6 +104,23 @@
                     <% }) %>
 
             </div>
+            <% } else { %>
+            <div class="row ">
+
+                <% values.forEach(function(value){ %>
+
+                    <div class="col-xs-6 col-md-3">
+                        <a href="/quiz/<%=value.category %>" class="thumbnail">
+                            <img src="http://www.mylmstips.com/wp-content/uploads/2014/06/ID-100215254.jpg" alt="..." width="180px" height="135px">
+                            <div>
+                                <%=value.category %>
+                            </div>
+                        </a>
+                    </div>
+                    <% }) %>
+
+            </div>
+            <% }%>
         </div>
     </div>
     <footer class="section section-primary">

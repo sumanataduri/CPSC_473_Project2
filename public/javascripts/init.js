@@ -1,8 +1,9 @@
 var login = require('./login');
 var signup = require('./signup');
+//var quiz = require('./quiz');
 
 var User = require('../../models/user');
-//var Quiz = require('../models/quiz');
+
 module.exports = function(passport){
 
     passport.serializeUser(function(user, done) {
@@ -19,7 +20,8 @@ module.exports = function(passport){
 
     login(passport);
     signup(passport);
-  
+  //  quiz(passport);
+   
     console.log("coming into init.js");
 
 }

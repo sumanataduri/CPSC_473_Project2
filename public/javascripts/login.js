@@ -10,6 +10,7 @@ module.exports = function(passport){
         function(req, username, password, done) {
             User.User.findOne({ 'username' :  username },
                 function(err, user) {
+                    console.log("in login.js file0");
                     if (err)
                         return done(err);
                     if (!user){
