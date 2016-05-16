@@ -45,6 +45,19 @@ a {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+.section2 {
+    margin-top: 348px;
+    height: 8em;
+}
+.section-primary {
+    background-color: #33BBA7 !important;
+    color: #eeeeee;
+}
+h2.text-left{
+    font-size: 16px;
+    margin: 0 0 10.5px;
+}
+
 .account-wall{
     margin-top: 20px;
     padding: 40px 0px 20px 0px;
@@ -92,7 +105,7 @@ ul.user-details{
     font-size: 16px;
     font-weight: 400;
     width: 100%;
-    height: 610px;
+    height: 100%;
     position: relative;
     overflow: hidden;
     color: #fff;

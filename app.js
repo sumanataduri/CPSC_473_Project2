@@ -60,5 +60,5 @@ if (app.get('env') === 'development') {
 }
 
 module.exports = app;
-app.listen(port);
+app.listen(8080);
 console.log('The magic happens on port ' + port);
