@@ -71,7 +71,6 @@
     </div>
     <div class="section">
         <div class="container">
-<<<<<<< HEAD
             <% if (!user) { %>
                 <div class="row ">
                     <h1>All Quizzes</h1>
@@ -138,102 +137,6 @@
                                 </a>
                             </div>
                             <% }) %>
-=======
-          <% if (!user) { %>
-            <div class="row ">
-               <h4>All Quizzes</h4>
-                <% values.forEach(function(value){ %>
-
-                    <div class="col-xs-6 col-md-3">
-                        <a href="/login" class="thumbnail">
-                            <img src="http://www.mylmstips.com/wp-content/uploads/2014/06/ID-100215254.jpg" alt="..." width="180px" height="135px">
-                            <div>
-                                <%=value.quizzname %>
-                            </div>
-                        </a>
-                    </div>
-                    <% }) %>
-
-            </div>
-            <div class="row ">
-              <h4>General</h4>
-                <% values.forEach(function(value){ %>
-                  <% if(value.category=='General'){%>
-                    <div class="col-xs-6 col-md-3">
-                        <a href="/login" class="thumbnail">
-                            <img src="http://www.mylmstips.com/wp-content/uploads/2014/06/ID-100215254.jpg" alt="..." width="180px" height="135px">
-                            <div>
-                                <%=value.quizzname %>
-                            </div>
-                        </a>
-                    </div>
-                    <%}%>
-                    <% }) %>
-
-            </div>
-            <div class="row ">
-              <h4>Entertainment</h4>
-                <% values.forEach(function(value){ %>
-                <% if(value.category==='Entertainment'){%>
-                    <div class="col-xs-6 col-md-3">
-                        <a href="/login" class="thumbnail">
-                            <img src="http://www.mylmstips.com/wp-content/uploads/2014/06/ID-100215254.jpg" alt="..." width="180px" height="135px">
-                            <div>
-                                <%=value.quizzname %>
-                            </div>
-                        </a>
-                    </div>
-                    <%}%>
-                    <% }) %>
-
-            </div>
-            <% } else { %>
-            <div class="row ">
-              <h4>All Quizzes</h4>
-                <% values.forEach(function(value){ %>
-
-                    <div class="col-xs-6 col-md-3">
-                        <a href="/quiz/<%=value.quizzname %>" class="thumbnail">
-                            <img src="http://www.mylmstips.com/wp-content/uploads/2014/06/ID-100215254.jpg" alt="..." width="180px" height="135px">
-                            <div>
-                                <%=value.quizzname %>
-                            </div>
-                        </a>
-                    </div>
-                    <% }) %>
-
-            </div>
-            <div class="row ">
-              <h4>General</h4>
-                <% values.forEach(function(value){ %>
-                  <% if(value.category=='General'){%>
-                    <div class="col-xs-6 col-md-3">
-                        <a href="/quiz/<%=value.quizzname %>" class="thumbnail">
-                            <img src="http://www.mylmstips.com/wp-content/uploads/2014/06/ID-100215254.jpg" alt="..." width="180px" height="135px">
-                            <div>
-                                <%=value.quizzname %>
-                            </div>
-                        </a>
-                    </div>
-                    <%}%>
-                    <% }) %>
-
-            </div>
-            <div class="row ">
-              <h4>Entertainment</h4>
-                <% values.forEach(function(value){ %>
-                <% if(value.category==='Entertainment'){%>
-                    <div class="col-xs-6 col-md-3">
-                        <a href="/quiz/<%=value.quizzname %>" class="thumbnail">
-                            <img src="http://www.mylmstips.com/wp-content/uploads/2014/06/ID-100215254.jpg" alt="..." width="180px" height="135px">
-                            <div>
-                                <%=value.quizzname %>
-                            </div>
-                        </a>
-                    </div>
-                    <%}%>
-                    <% }) %>
->>>>>>> ebb6130097aefa6d70bc756d1caaa42adbafafd5
 
                     </div><br>
                     <div class="row ">
