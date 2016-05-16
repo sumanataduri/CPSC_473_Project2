@@ -68,7 +68,7 @@ var main = function() {
                 $('div.results p').text("You have "+ score+" points "+ "and your opponent's score is "+scoreOpponent );
             }
             $('div').one('click','p.ans',function(){
-            console.log($(this).text()+" "+$('div#'+i+'.answer').text());
+           // console.log($(this).text()+" "+$('div#'+i+'.answer').text());
             if($(this).text()===$('div#'+i+'.answer').text()){
                 $(this).addClass('correct');
                 $('div#'+i+'.question.unanswered.active').removeClass('unanswered').addClass('answered');
