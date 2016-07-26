@@ -1,5 +1,5 @@
-# CPSC_473_Project2
-Quizzup Project
+QuizzUp Project
+
 
 Please download the code and run Foreman start to run the code.
 
